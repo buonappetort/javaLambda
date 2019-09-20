@@ -1,2 +1,2 @@
 # javaLambda
-Introduction to lambda functions using Java 8
+A guide to implementing lambda functions in multiple languages.
