@@ -27,7 +27,28 @@ There are 3 ways by which you can import the Amazon SDK into your Java project
 	3. Through the Eclipse Toolkit for AWS
 
 <br />
-This tutorial was built using Eclipse - so we are assuming that you will be using #3, but you are free to follow the [AWS Guide] (https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/setup-install.html) for installing the dependencies using the other methods.
+This tutorial was built using Eclipse - so we are assuming that you will be using #3, but you are free to follow the AWS Guide (https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/setup-install.html) for installing the dependencies using the other methods. 
+</p>
+
+<p>
+Lesson learned -
+While creating this doc, I attempted to retroactively package the java project - meaning I created it as a normal java project and then tried to import the aws dependencies. This proved to be a disaster - I then blew it away and restarted using the AWS toolkit for eclipse to create the package. This is the method that I recommend using. It makes life a lot easier
+</p>
+
+<p>
+Start by installing the AWS toolkit for ecplise through the eclipse market place. While it is installing, make an IAM role for the lambda function to invoke and make sure the role has the correct permissions for lambda access. Once the Eclipse toolkit is installed then configure the access keys through the system preferences.
+</p>
+
+<p>Start a new "Java Lambda Project" using the AWS Toolkit in the toolbar.</p>
+
+<p>
+**INFo about the code
+</p>
+
+<p>
+The code is going to be hosted in an S3 bucket, so we must have an S3 bucket created for it. The AWS toolkit will build the code for you into a zip file when you use the toolkit to push it to your S3 bucket. 
+<br/>
+Once the code is build and pushed to S3 you can test it by right clicking in the Eclipse window for the class and selecting "Run function on AWS Lambda". You can also test on the AWS Lambda console by creating a test configuration.
 </p>
 
 
